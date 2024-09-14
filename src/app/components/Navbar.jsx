@@ -5,6 +5,7 @@ import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import Image from 'next/image';
 
 function Navbar() {
     const num = 1;
@@ -13,13 +14,13 @@ function Navbar() {
         <div className='h-20 bg-[#01B0F1] flex items-center justify-between px-4 md:px-12 shadow-custom'>
             {/* Left navigation */}
             <div className='flex items-center space-x-2'>
-                <motion.img
+                <Image
                     src="/Images/logo.png"
                     alt="Logo"
                     className='w-[43px]'
-                    initial={{ opacity: 0, x: -100, rotate: -180 }} // Start position
-                    animate={{ opacity: 1, x: 0, rotate: 0 }} // End position
-                    transition={{ duration: 1, ease: "easeOut" }} // Animation duration and easing
+                    width={43}
+                    height={43}
+
                 />
                 <motion.img
                     src="/Images/GradHub.png"
